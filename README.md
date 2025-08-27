@@ -1,6 +1,11 @@
 # espruino-ida
 
 ```
+esptool.py --chip esp32 --port /dev/cu.usbserial-110 --baud 115200 erase_flash
+```
+
+
+```
 esptool.py --chip esp32 --port /dev/cu.usbserial-110 --baud 115200 \
   write_flash -z \
   0x1000   bootloader.bin \
