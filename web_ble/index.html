@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Espruino BLE Uploader</title>
+<style>
+  :root{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif}
+  body{margin:0;padding:16px;background:#f7f8fa;color:#222}
+  h1{font-size:20px;margin:0 0 12px}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  button{padding:8px 12px;border:0;border-radius:8px;background:#1f6feb;color:#fff;cursor:pointer}
+  button[disabled]{opacity:.5;cursor:not-allowed}
+  textarea, input[type="text"]{width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:8px;padding:10px;background:#fff}
+  #log{height:220px;font-family:ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;overflow:auto}
+  #code{height:200px;font-family:ui-monospace,Menlo,Consolas,monospace}
+  small{color:#666}
+  .pill{display:inline-block;padding:3px 8px;border-radius:999px;background:#e7eefc;color:#1f3b8a;font-size:12px}
+</style>
+</head>
+<body>
+  <h1>Espruino BLE Uploader <span id="status" class="pill">未连接</span></h1>
+
+  <div class="row">
+    <button id="connect">连接蓝牙</button>
+    <button id="disconnect" disabled>断开</button>
+    <button id="stop" disabled>停止(Ctrl-C)</button>
+    <button id="reset" disabled>软复位(Ctrl-D)</button>
+    <button id="clear">清屏</button>
+  </div>
+
+  <label>命令（单行）</label>
+  <div class="row">
+    <input id="cmd" type="text" placeholder="例如：print('hi')" />
+    <button id="send" disabled>发送</button>
+  </div>
+
+  <label>代码（多行，Upload To RAM）</label>
+  <textarea id="code">// 示例：每秒打印一次
+setInterval(function(){
+  console.log('Hello over BLE', Date.now());
+}, 1000);</textarea>
+  <div class="row">
+    <button id="run" disabled>运行到 RAM</button>
+    <button id="saveFlash" disabled>保存到 Flash 并开机自启</button>
+  </div>
+
+  <label>输出</label>
+  <textarea id="log" readonly></textarea>
+  <div class="row">
+    <small>提示：Web Bluetooth 需 Chrome/Edge + 本地/HTTPS；Espruino 需先 <code>Bluetooth.setConsole(true); save();</code></small>
+  </div>
+
+<script>
+(() => {
+  // Nordic UART Service (Espruino BLE 控制台)
+  const NUS_SERVICE = '6e400001-b5a3-f393-e0a9-e50e24dcca9e';
+  const NUS_RX      = '6e400002-b5a3-f393-e0a9-e50e24dcca9e'; // 写入
+  const NUS_TX      = '6e400003-b5a3-f393-e0a9-e50e24dcca9e'; // 通知
+
+  const $ = sel => document.querySelector(sel);
+  const logBox = $('#log');
+  const codeBox = $('#code');
+  const cmdBox = $('#cmd');
+  const statusPill = $('#status');
+
+  let device, server, service, rxChar, txChar;
+  let connected = false;
+  const enc = new TextEncoder();
+  const dec = new TextDecoder();
+
+  function setUI(on){
+    connected = !!on;
+    $('#disconnect').disabled = !on;
+    $('#stop').disabled = !on;
+    $('#reset').disabled = !on;
+    $('#send').disabled = !on;
+    $('#run').disabled = !on;
+    $('#saveFlash').disabled = !on;
+    $('#connect').disabled = on;
+    statusPill.textContent = on ? '已连接' : '未连接';
+  }
+
+  function log(...args){
+    const s = args.join(' ');
+    logBox.value += `[${new Date().toLocaleTimeString()}] ${s}\n`;
+    logBox.scrollTop = logBox.scrollHeight;
+    console.log('[ESP]', s);
+  }
+
+  async function connect() {
+    try {
+      device = await navigator.bluetooth.requestDevice({
+        acceptAllDevices: true,
+        optionalServices: [NUS_SERVICE],
+      });
+      device.addEventListener('gattserverdisconnected', onDisconnect);
+      server = await device.gatt.connect();
+      service = await server.getPrimaryService(NUS_SERVICE);
+      rxChar = await service.getCharacteristic(NUS_RX);
+      txChar = await service.getCharacteristic(NUS_TX);
+      await txChar.startNotifications();
+      txChar.addEventListener('characteristicvaluechanged', e => {
+        const text = dec.decode(e.target.value);
+        log(text.replace(/\r/g,'')); // 打印设备输出
+      });
+      setUI(true);
+      log('连接成功：', device.name || '(无名设备)');
+      // 发送回车尝试拿到提示符
+      await writeLine('');
+    } catch (e) {
+      log('连接失败：', e.message || e);
+      setUI(false);
+    }
+  }
+
+  function onDisconnect(){
+    setUI(false);
+    log('已断开');
+  }
+
+  async function disconnect(){
+    try {
+      if (device && device.gatt.connected) device.gatt.disconnect();
+    } catch(e){}
+    setUI(false);
+  }
+
+  // 以“行”为粒度发送（自动加 \n），内部做 20B 分片与节流
+  async function writeLine(line){
+    await writeRaw(line + '\n');
+  }
+
+  async function writeRaw(str){
+    // 注意 MTU（典型20字节）；分片发送并稍作间隔防止溢出
+    const data = enc.encode(str);
+    const CHUNK = 20;
+    for (let i = 0; i < data.length; i += CHUNK) {
+      const chunk = data.slice(i, i + CHUNK);
+      await rxChar.writeValueWithoutResponse(chunk);
+      // 小间隔，视情况可调
+      await new Promise(r => setTimeout(r, 8));
+    }
+  }
+
+  // 运行到 RAM：先 Ctrl-C 停止，再逐行发送
+  async function runToRAM(){
+    await writeRaw('\x03'); // Ctrl-C
+    const lines = codeBox.value.replace(/\r\n/g,'\n').split('\n');
+    for (const ln of lines) await writeLine(ln);
+    log('已发送到 RAM');
+  }
+
+  // 保存到 Flash 开机自启：写到 Storage 并设启动代码
+  async function saveToFlash(){
+    await writeRaw('\x03'); // Ctrl-C
+    const code = codeBox.value;
+    // 用 JSON.stringify 安全嵌入文本
+    const payload =
+      'require("Storage").write("app.js",' + JSON.stringify(code) + ');\n' +
+      'E.setBootCode(\'load("app.js");\');\n' +
+      'print("Saved to Flash, will run on boot");\n';
+    await writeRaw(payload);
+    log('已写入 Storage 并设置启动代码 (app.js)');
+  }
+
+  // 事件绑定
+  $('#connect').onclick = connect;
+  $('#disconnect').onclick = disconnect;
+  $('#clear').onclick = () => { logBox.value = ''; };
+  $('#stop').onclick = async ()=> { await writeRaw('\x03'); log('已发送 Ctrl-C'); };
+  $('#reset').onclick = async ()=> { await writeRaw('\x04'); log('已发送 Ctrl-D（软复位）'); };
+  $('#send').onclick = async ()=> {
+    const s = cmdBox.value.trim();
+    if (!s) return;
+    await writeLine(s);
+  };
+  $('#run').onclick = runToRAM;
+  $('#saveFlash').onclick = saveToFlash;
+
+  // Enter 发送单行命令
+  cmdBox.addEventListener('keydown', async (e)=>{
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      $('#send').click();
+    }
+  });
+
+  // 兼容性提示
+  if (!('bluetooth' in navigator)) {
+    log('当前浏览器不支持 Web Bluetooth，请用 Chrome/Edge。');
+  } else {
+    log('准备就绪：点击“连接蓝牙”开始。');
+  }
+})();
+</script>
+</body>
+</html>
