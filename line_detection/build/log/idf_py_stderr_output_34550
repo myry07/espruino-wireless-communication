@@ -1,0 +1,91 @@
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/cu.usbserial-10 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+[0m
+[0;33m--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375de9: panic_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/panic.c:454
+--- 0x4037c651: esp_system_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40383109: abort at /Users/wangjiaqi/esp/esp-idf/components/newlib/abort.c:38
+--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+--- 0x4200d168: app_main at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:419
+--- 0x4202e22f: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037d0bd: vPortTaskWrapper at /Users/wangjiaqi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375d29: esp_restart_noos at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+[0m
+[0;33m--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375de9: panic_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/panic.c:454
+--- 0x4037c651: esp_system_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40383109: abort at /Users/wangjiaqi/esp/esp-idf/components/newlib/abort.c:38
+--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+--- 0x4200d168: app_main at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:419
+--- 0x4202e22f: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037d0bd: vPortTaskWrapper at /Users/wangjiaqi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375d29: esp_restart_noos at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+[0m
+[0;33m--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375de9: panic_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/panic.c:454
+--- 0x4037c651: esp_system_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40383109: abort at /Users/wangjiaqi/esp/esp-idf/components/newlib/abort.c:38
+--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+--- 0x4200d168: app_main at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:419
+--- 0x4202e22f: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037d0bd: vPortTaskWrapper at /Users/wangjiaqi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375d29: esp_restart_noos at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+[0m
+[0;33m--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375de9: panic_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/panic.c:454
+--- 0x4037c651: esp_system_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40383109: abort at /Users/wangjiaqi/esp/esp-idf/components/newlib/abort.c:38
+--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+--- 0x4200d168: app_main at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:419
+--- 0x4202e22f: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037d0bd: vPortTaskWrapper at /Users/wangjiaqi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375d29: esp_restart_noos at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+[0m
+[0;33m--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375de9: panic_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/panic.c:454
+--- 0x4037c651: esp_system_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40383109: abort at /Users/wangjiaqi/esp/esp-idf/components/newlib/abort.c:38
+--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+--- 0x4200d168: app_main at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:419
+--- 0x4202e22f: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037d0bd: vPortTaskWrapper at /Users/wangjiaqi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375d29: esp_restart_noos at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+[0m
+[0;33m--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+[0m
+[0;33m--- 0x40375de9: panic_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/panic.c:454
+--- 0x4037c651: esp_system_abort at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x40383109: abort at /Users/wangjiaqi/esp/esp-idf/components/newlib/abort.c:38
+--- 0x4037c647: _esp_error_check_failed at /Users/wangjiaqi/esp/esp-idf/components/esp_system/esp_err.c:49
+--- 0x4200d0e5: uart1_init at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:388 (discriminator 1)
+--- 0x4200d168: app_main at /Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/main/line_detection.c:419
+--- 0x4202e22f: main_task at /Users/wangjiaqi/esp/esp-idf/components/freertos/app_startup.c:208
+--- 0x4037d0bd: vPortTaskWrapper at /Users/wangjiaqi/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375d29: esp_restart_noos at /Users/wangjiaqi/esp/esp-idf/components/esp_system/port/soc/

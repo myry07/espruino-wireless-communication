@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "line_detection",
-    "project_version":    "f22e50b",
+    "project_version":    "411ac25-dirty",
     "project_path":       "/Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection",
     "idf_path":           "/Users/wangjiaqi/esp/esp-idf",
     "build_dir":          "/Users/wangjiaqi/Documents/Github/espruino-wireless-communication/line_detection/build",

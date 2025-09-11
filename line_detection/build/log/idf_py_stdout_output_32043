@@ -1,0 +1,1512 @@
+7) app_init: Compile time:     Sep 11 2025 13:03:19
+[0;32mI (672) app_init: ELF file SH�ESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x28 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 11 2025 13:03:22[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0ee40h ( 60992) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001ee68 vaddr=3fc94600 size=011b0h (  4528) load[0m
+[0;32mI (101) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=2975ch (169820) map[0m
+[0;32mI (134) esp_image: segment 3: paddr=00049784 vaddr=3fc957b0 size=043d8h ( 17368) load[0m
+[0;32mI (138) esp_image: segment 4: paddr=0004db64 vaddr=40374000 size=104f8h ( 66808) load[0m
+[0;32mI (153) esp_image: segment 5: paddr=0005e064 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (160) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (160) boot: Disabling RNG early entropy source...[0m
+[0;32mI (170) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (171) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (171) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (173) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (177) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (181) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (185) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (190) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (195) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (200) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (205) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (210) MSPI Timing: PSRAM timing tuning index: 4[0m
+[0;32mI (214) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (217) esp_psram: Speed: 80MHz[0m
+[0;32mI (220) cpu_start: Multicore app[0m
+[0;32mI (649) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (658) cpu_start: Pro cpu start user code[0m
+[0;32mI (658) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (658) app_init: Application information:[0m
+[0;32mI (658) app_init: Project name:     line_detection[0m
+[0;32mI (663) app_init: App version:      411ac25-dirty[0m
+[0;32mI (667) app_init: Compile time:     Sep 11 2025 13:03:19[0m
+[0;32mI (672) app_init: ELF file SHA256:  6f8c01457...[0m
+[0;32mI (676) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (681) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (685) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (689) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (693) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (699) heap_init: At 3FC9AD80 len 0004E990 (314 KiB): RAM[0m
+[0;32mI (704) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (709) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (714) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (720) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (727) spi_flash: detected chip: gd[0m
+[0;32mI (729) spi_flash: flash io: dio[0m
+[0;32mI (732) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (739) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (746) main_task: Started on CPU0[0m
+[0;32mI (776) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (776) main_task: Calling app_main()[0m
+[0;32mI (776) s3 ll_cam: DMA Channel=0[0m
+[0;32mI (776) cam_hal: cam init ok[0m
+[0;32mI (786) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (786) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (796) ov3660: Mismatch PID=0x9090[0m
+[0;32mI (796) ov5640: Mismatch PID=0x9090[0m
+[0;32mI (796) camera: Camera PID=0x2145 VER=0x00 MIDL=0x00 MIDH=0x00[0m
+[0;32mI (796) camera: Detected GC2145 camera[0m
+[0;32mI (806) camera: Detected camera at address=0x3c[0m
+[0;32mI (1216) cam_hal: PSRAM DMA mode disabled[0m
+[0;32mI (1216) s3 ll_cam: node_size: 3840, nodes_per_line: 1, lines_per_node: 12[0m
+[0;32mI (1216) s3 ll_cam: dma_half_buffer_min:  3840, dma_half_buffer:  7680, lines_per_half_buffer: 24, dma_buffer_size: 30720[0m
+[0;32mI (1226) cam_hal: buffer_size: 30720, half_buffer_size: 7680, node_buffer_size: 3840, node_cnt: 8, total_cnt: 5[0m
+[0;32mI (1236) cam_hal: Allocating 19200 Byte frame buffer in PSRAM[0m
+[0;32mI (1236) cam_hal: cam config ok[0m
+[0;32mI (1236) gc2145: subsample win:480x360, ratio:0.333333[0m
+[0;33mW (1256) gc2145: unsupport format[0m
+[0;33mW (1256) gc2145: Unsupported[0m
+[0;33mW (1256) gc2145: Unsupported[0m
+[0;33mW (1256) gc2145: Unsupported[0m
+[0;33mW (1256) gc2145: Unsupported[0m
+[0;33mW (1256) gc2145: Unsupported[0m
+[0;32mI (1256) main_task: Returned from app_main()[0m
+[0;32mI (1356) cam: Camera started. FrameSize=160x120, fmt=3[0m
+[0;32mI (1426) cam: TH=148, TOP:(103,16)  MID:(56,61)  BOT:(47,99)[0m
+[0;32mI (1426) angle: recv ts=709980us th=148 sz=160x120 | TOP(OK):(103,16)  MID(OK):(56,61)  BOT(OK):(47,99)[0m
+[0;32mI (1476) cam: TH=132, TOP:(101,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (1476) angle: recv ts=754890us th=132 sz=160x120 | TOP(OK):(101,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (1516) cam: TH=131, TOP:(101,17)  MID:(61,60)  BOT:(47,99)[0m
+[0;32mI (1516) angle: recv ts=799834us th=131 sz=160x120 | TOP(OK):(101,17)  MID(OK):(61,60)  BOT(OK):(47,99)[0m
+[0;32mI (1566) cam: TH=127, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (1566) angle: recv ts=844780us th=127 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (1606) cam: TH=124, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (1606) angle: recv ts=889725us th=124 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (1656) cam: TH=121, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (1656) angle: recv ts=934668us th=121 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (1696) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (1696) angle: recv ts=979614us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (1746) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (1746) angle: recv ts=1024559us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (1786) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (1786) angle: recv ts=1069504us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (1836) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (1836) angle: recv ts=1114449us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (1876) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (1876) angle: recv ts=1159395us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (1926) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (1926) angle: recv ts=1204340us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (1966) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (1966) angle: recv ts=1249285us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (2016) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (2016) angle: recv ts=1294230us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (2056) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2056) angle: recv ts=1339176us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2106) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (2106) angle: recv ts=1384121us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (2146) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (2146) angle: recv ts=1429066us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (2196) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (2196) angle: recv ts=1474012us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (2236) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2236) angle: recv ts=1518957us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2286) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2286) angle: recv ts=1563902us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2326) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2326) angle: recv ts=1608847us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2376) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2376) cam: FPS=22[0m
+[0;32mI (2376) angle: recv ts=1653793us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2416) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2416) angle: recv ts=1698739us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2466) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2466) angle: recv ts=1743688us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2506) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2506) angle: recv ts=1788635us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2556) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2556) angle: recv ts=1833575us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2596) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (2596) angle: recv ts=1878527us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (2646) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (2646) angle: recv ts=1923466us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (2686) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (2686) angle: recv ts=1968417us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (2736) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (2736) angle: recv ts=2013357us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (2776) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2776) angle: recv ts=2058308us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2826) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2826) angle: recv ts=2103247us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2866) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2866) angle: recv ts=2148198us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2916) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (2916) angle: recv ts=2193138us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (2956) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (2956) angle: recv ts=2238089us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3006) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3006) angle: recv ts=2283028us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3046) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3046) angle: recv ts=2327979us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3096) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3096) angle: recv ts=2372919us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3136) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3136) angle: recv ts=2417870us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3186) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3186) angle: recv ts=2462809us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3226) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3226) angle: recv ts=2507761us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3276) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3276) angle: recv ts=2552700us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3316) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3316) angle: recv ts=2597651us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3366) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3366) angle: recv ts=2642590us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3406) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (3406) cam: FPS=23[0m
+[0;32mI (3406) angle: recv ts=2687542us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (3456) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3456) angle: recv ts=2732481us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3496) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (3496) angle: recv ts=2777432us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (3546) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (3546) angle: recv ts=2822372us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (3586) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3586) angle: recv ts=2867323us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3636) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3636) angle: recv ts=2912262us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3676) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3676) angle: recv ts=2957213us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3726) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (3726) angle: recv ts=3002153us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (3766) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (3766) angle: recv ts=3047104us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (3816) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (3816) angle: recv ts=3092043us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (3856) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3856) angle: recv ts=3136995us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3906) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3906) angle: recv ts=3181934us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3946) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3946) angle: recv ts=3226885us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (3996) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (3996) angle: recv ts=3271824us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (4036) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4036) angle: recv ts=3316776us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4086) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4086) angle: recv ts=3361715us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4126) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (4126) angle: recv ts=3406666us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (4176) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4176) angle: recv ts=3451605us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4216) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4216) angle: recv ts=3496557us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4266) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (4266) angle: recv ts=3541496us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (4306) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4306) angle: recv ts=3586447us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4356) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4356) angle: recv ts=3631387us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4396) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4396) angle: recv ts=3676338us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4436) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4446) cam: FPS=23[0m
+[0;32mI (4446) angle: recv ts=3721277us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4486) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4486) angle: recv ts=3766228us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4526) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4536) angle: recv ts=3811170us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4576) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (4576) angle: recv ts=3856119us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (4616) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4626) angle: recv ts=3901058us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4666) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4666) angle: recv ts=3946003us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4706) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4706) angle: recv ts=3990948us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4756) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4756) angle: recv ts=4035894us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4796) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4796) angle: recv ts=4080839us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4846) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4846) angle: recv ts=4125784us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4886) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4886) angle: recv ts=4170729us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4936) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4936) angle: recv ts=4215678us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (4976) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (4976) angle: recv ts=4260623us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5026) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5026) angle: recv ts=4305565us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5066) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5066) angle: recv ts=4350510us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5116) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (5116) angle: recv ts=4395456us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (5156) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (5156) angle: recv ts=4440401us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (5206) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5206) angle: recv ts=4485346us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5246) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5246) angle: recv ts=4530292us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5296) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (5296) angle: recv ts=4575237us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (5336) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5336) angle: recv ts=4620182us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5386) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5386) angle: recv ts=4665128us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5426) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (5426) angle: recv ts=4710073us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (5476) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (5476) cam: FPS=23[0m
+[0;32mI (5476) angle: recv ts=4755018us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (5516) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5516) angle: recv ts=4799963us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5566) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5566) angle: recv ts=4844909us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5606) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (5606) angle: recv ts=4889854us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (5656) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5656) angle: recv ts=4934799us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5696) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5696) angle: recv ts=4979744us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5746) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5746) angle: recv ts=5024690us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5786) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (5786) angle: recv ts=5069635us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (5836) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (5836) angle: recv ts=5114583us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (5876) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5876) angle: recv ts=5159526us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5926) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5926) angle: recv ts=5204474us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (5966) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (5966) angle: recv ts=5249419us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6016) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6016) angle: recv ts=5294364us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6056) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6056) angle: recv ts=5339307us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6106) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6106) angle: recv ts=5384252us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6146) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6146) angle: recv ts=5429197us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6196) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (6196) angle: recv ts=5474142us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (6236) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6236) angle: recv ts=5519088us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6286) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (6286) angle: recv ts=5564033us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (6326) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6326) angle: recv ts=5608981us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6376) cam: TH=120, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (6376) angle: recv ts=5653924us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (6416) cam: TH=120, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (6416) angle: recv ts=5698869us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (6466) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6466) angle: recv ts=5743814us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6506) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6506) cam: FPS=23[0m
+[0;32mI (6506) angle: recv ts=5788759us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6556) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6556) angle: recv ts=5833705us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6596) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6596) angle: recv ts=5878657us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6646) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6646) angle: recv ts=5923596us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6686) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6686) angle: recv ts=5968547us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6736) cam: TH=120, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (6736) angle: recv ts=6013487us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (6776) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6776) angle: recv ts=6058438us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6826) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6826) angle: recv ts=6103377us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6866) cam: TH=120, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (6866) angle: recv ts=6148328us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (6916) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6916) angle: recv ts=6193268us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (6956) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (6956) angle: recv ts=6238219us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7006) cam: TH=120, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (7006) angle: recv ts=6283158us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (7046) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7046) angle: recv ts=6328110us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7096) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7096) angle: recv ts=6373049us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7136) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7136) angle: recv ts=6418000us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7186) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7186) angle: recv ts=6462939us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7226) cam: TH=120, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (7226) angle: recv ts=6507891us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (7276) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7276) angle: recv ts=6552830us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7316) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7316) angle: recv ts=6597781us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7366) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7366) angle: recv ts=6642721us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7406) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7406) angle: recv ts=6687672us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7456) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7456) angle: recv ts=6732611us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7496) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7496) angle: recv ts=6777562us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7546) cam: TH=120, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (7546) cam: FPS=23[0m
+[0;32mI (7546) angle: recv ts=6822502us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (7586) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7586) angle: recv ts=6867453us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7636) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7636) angle: recv ts=6912392us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7676) cam: TH=120, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (7676) angle: recv ts=6957343us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (7726) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7726) angle: recv ts=7002282us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7766) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7766) angle: recv ts=7047234us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7816) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7816) angle: recv ts=7092173us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7856) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7856) angle: recv ts=7137124us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7906) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7906) angle: recv ts=7182064us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7946) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7946) angle: recv ts=7227015us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (7996) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (7996) angle: recv ts=7271955us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8036) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8036) angle: recv ts=7316906us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8086) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8086) angle: recv ts=7361845us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8126) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8126) angle: recv ts=7406796us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8176) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8176) angle: recv ts=7451736us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8216) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8216) angle: recv ts=7496687us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8266) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8266) angle: recv ts=7541626us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8306) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8306) angle: recv ts=7586577us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8356) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8356) angle: recv ts=7631517us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8396) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8396) angle: recv ts=7676468us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8446) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8446) angle: recv ts=7721407us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8486) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8486) angle: recv ts=7766358us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8526) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8536) angle: recv ts=7811299us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8576) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8576) cam: FPS=23[0m
+[0;32mI (8576) angle: recv ts=7856249us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8616) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8626) angle: recv ts=7901192us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8666) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8666) angle: recv ts=7946140us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8706) cam: TH=120, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (8716) angle: recv ts=7991081us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (8756) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8756) angle: recv ts=8036026us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8796) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8796) angle: recv ts=8080969us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8846) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8846) angle: recv ts=8125917us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8886) cam: TH=120, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8886) angle: recv ts=8170859us th=120 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8936) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8936) angle: recv ts=8215808us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (8976) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (8976) angle: recv ts=8260753us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9026) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9026) angle: recv ts=8305698us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9066) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9066) angle: recv ts=8350643us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9116) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9116) angle: recv ts=8395586us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9156) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9156) angle: recv ts=8440531us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9206) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9206) angle: recv ts=8485476us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9246) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9246) angle: recv ts=8530421us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9296) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9296) angle: recv ts=8575370us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9336) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9336) angle: recv ts=8620312us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9386) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9386) angle: recv ts=8665257us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9426) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9426) angle: recv ts=8710203us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9476) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9476) angle: recv ts=8755148us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9516) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9516) angle: recv ts=8800093us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9566) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9566) angle: recv ts=8845038us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9606) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9606) cam: FPS=23[0m
+[0;32mI (9606) angle: recv ts=8889984us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9656) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9656) angle: recv ts=8934929us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9696) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9696) angle: recv ts=8979874us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9746) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9746) angle: recv ts=9024819us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9786) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9786) angle: recv ts=9069765us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9836) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9836) angle: recv ts=9114710us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9876) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9876) angle: recv ts=9159655us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9926) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9926) angle: recv ts=9204601us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (9966) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (9966) angle: recv ts=9249546us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10016) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10016) angle: recv ts=9294497us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10056) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10056) angle: recv ts=9339439us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10106) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10106) angle: recv ts=9384385us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10146) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10146) angle: recv ts=9429330us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10196) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10196) angle: recv ts=9474275us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10236) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10236) angle: recv ts=9519224us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10286) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10286) angle: recv ts=9564166us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10326) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10326) angle: recv ts=9609111us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10376) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10376) angle: recv ts=9654056us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10416) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10416) angle: recv ts=9699002us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10466) cam: TH=119, TOP:(99,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (10466) angle: recv ts=9743947us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (10506) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10506) angle: recv ts=9788892us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10556) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10556) angle: recv ts=9833837us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10596) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10596) angle: recv ts=9878783us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10646) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10646) cam: FPS=23[0m
+[0;32mI (10646) angle: recv ts=9923728us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10686) cam: TH=119, TOP:(99,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (10686) angle: recv ts=9968678us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (10736) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10736) angle: recv ts=10013619us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10776) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10776) angle: recv ts=10058570us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10826) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10826) angle: recv ts=10103513us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10866) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10866) angle: recv ts=10148461us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10916) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10916) angle: recv ts=10193401us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (10956) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (10956) angle: recv ts=10238352us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11006) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11006) angle: recv ts=10283294us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11046) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11046) angle: recv ts=10328242us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11096) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11096) angle: recv ts=10373182us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11136) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11136) angle: recv ts=10418133us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11186) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11186) angle: recv ts=10463072us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11226) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11226) angle: recv ts=10508023us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11276) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11276) angle: recv ts=10552966us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11316) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11316) angle: recv ts=10597914us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11366) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11366) angle: recv ts=10642856us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11406) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11406) angle: recv ts=10687808us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11456) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11456) angle: recv ts=10732744us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11496) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11496) angle: recv ts=10777695us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11546) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11546) angle: recv ts=10822634us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11586) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11586) angle: recv ts=10867589us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11636) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11636) angle: recv ts=10912525us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11676) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11676) cam: FPS=23[0m
+[0;32mI (11676) angle: recv ts=10957476us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11726) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11726) angle: recv ts=11002415us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11766) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11766) angle: recv ts=11047367us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11816) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11816) angle: recv ts=11092306us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11856) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11856) angle: recv ts=11137257us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11906) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11906) angle: recv ts=11182197us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11946) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11946) angle: recv ts=11227148us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (11996) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (11996) angle: recv ts=11272090us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12036) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12036) angle: recv ts=11317041us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12086) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12086) angle: recv ts=11361978us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12126) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12126) angle: recv ts=11406929us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12176) cam: TH=118, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (12176) angle: recv ts=11451868us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (12216) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12216) angle: recv ts=11496823us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12266) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12266) angle: recv ts=11541762us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12306) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12306) angle: recv ts=11586713us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12356) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12356) angle: recv ts=11631649us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12396) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12396) angle: recv ts=11676604us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12446) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12446) angle: recv ts=11721540us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12486) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12486) angle: recv ts=11766491us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12536) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12536) angle: recv ts=11811433us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12576) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12576) angle: recv ts=11856385us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12626) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12626) angle: recv ts=11901324us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12666) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12666) angle: recv ts=11946275us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12706) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12716) cam: FPS=23[0m
+[0;32mI (12716) angle: recv ts=11991212us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12756) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12756) angle: recv ts=12036163us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12796) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12806) angle: recv ts=12081105us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12846) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12846) angle: recv ts=12126050us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12886) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12886) angle: recv ts=12170995us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12936) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12936) angle: recv ts=12215940us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (12976) cam: TH=118, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (12976) angle: recv ts=12260883us th=118 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13026) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13026) angle: recv ts=12305828us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13066) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13066) angle: recv ts=12350773us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13116) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13116) angle: recv ts=12395719us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13156) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13156) angle: recv ts=12440664us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13206) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13206) angle: recv ts=12485609us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13246) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13246) angle: recv ts=12530554us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13296) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13296) angle: recv ts=12575500us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13336) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13336) angle: recv ts=12620448us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13386) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13386) angle: recv ts=12665390us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13426) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13426) angle: recv ts=12710336us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13476) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13476) angle: recv ts=12755281us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13516) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13516) angle: recv ts=12800226us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13566) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13566) angle: recv ts=12845171us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13606) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13606) angle: recv ts=12890117us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13656) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13656) angle: recv ts=12935062us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13696) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13696) angle: recv ts=12980007us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13746) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13746) cam: FPS=23[0m
+[0;32mI (13746) angle: recv ts=13024952us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13786) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13786) angle: recv ts=13069898us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13836) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13836) angle: recv ts=13114843us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13876) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13876) angle: recv ts=13159788us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13926) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13926) angle: recv ts=13204734us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (13966) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (13966) angle: recv ts=13249679us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14016) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14016) angle: recv ts=13294624us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14056) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14056) angle: recv ts=13339569us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14106) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14106) angle: recv ts=13384515us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14146) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14146) angle: recv ts=13429460us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14196) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14196) angle: recv ts=13474405us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14236) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14236) angle: recv ts=13519351us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14286) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14286) angle: recv ts=13564296us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14326) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14326) angle: recv ts=13609241us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14376) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14376) angle: recv ts=13654186us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14416) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14416) angle: recv ts=13699132us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14466) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14466) angle: recv ts=13744080us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14506) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14506) angle: recv ts=13789025us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14556) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14556) angle: recv ts=13833968us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14596) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14596) angle: recv ts=13878913us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14646) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14646) angle: recv ts=13923861us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14686) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14686) angle: recv ts=13968803us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14736) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14736) angle: recv ts=14013752us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14776) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14776) cam: FPS=23[0m
+[0;32mI (14776) angle: recv ts=14058697us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14826) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14826) angle: recv ts=14103639us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14866) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14866) angle: recv ts=14148591us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14916) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14916) angle: recv ts=14193531us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (14956) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (14956) angle: recv ts=14238482us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15006) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15006) angle: recv ts=14283421us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15046) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15046) angle: recv ts=14328372us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15096) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15096) angle: recv ts=14373312us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15136) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15136) angle: recv ts=14418263us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15186) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15186) angle: recv ts=14463205us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15226) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15226) angle: recv ts=14508153us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15276) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15276) angle: recv ts=14553096us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15316) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15316) angle: recv ts=14598044us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15366) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15366) angle: recv ts=14642986us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15406) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15406) angle: recv ts=14687934us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15456) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15456) angle: recv ts=14732874us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15496) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15496) angle: recv ts=14777828us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15546) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15546) angle: recv ts=14822764us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15586) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15586) angle: recv ts=14867715us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15636) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15636) angle: recv ts=14912658us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15676) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15676) angle: recv ts=14957609us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15726) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15726) angle: recv ts=15002548us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15766) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15766) angle: recv ts=15047500us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15816) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15816) cam: FPS=23[0m
+[0;32mI (15816) angle: recv ts=15092436us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15856) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15856) angle: recv ts=15137390us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15906) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15906) angle: recv ts=15182330us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15946) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15946) angle: recv ts=15227278us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (15996) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (15996) angle: recv ts=15272220us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16036) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16036) angle: recv ts=15317168us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16086) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16086) angle: recv ts=15362111us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16126) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16126) angle: recv ts=15407062us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16176) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16176) angle: recv ts=15451998us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16216) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16216) angle: recv ts=15496950us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16266) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16266) angle: recv ts=15541889us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16306) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16306) angle: recv ts=15586843us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16356) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16356) angle: recv ts=15631779us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16396) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16396) angle: recv ts=15676731us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16446) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16446) angle: recv ts=15721670us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16486) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16486) angle: recv ts=15766624us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16536) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16536) angle: recv ts=15811563us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16576) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16576) angle: recv ts=15856515us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16626) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16626) angle: recv ts=15901454us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16666) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16666) angle: recv ts=15946405us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16716) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16716) angle: recv ts=15991345us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16756) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (16756) angle: recv ts=16036296us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (16796) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (16806) angle: recv ts=16081235us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (16846) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16846) cam: FPS=23[0m
+[0;32mI (16846) angle: recv ts=16126186us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16886) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16896) angle: recv ts=16171126us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16936) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (16936) angle: recv ts=16216077us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (16976) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (16976) angle: recv ts=16261016us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (17026) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17026) angle: recv ts=16305961us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17066) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17066) angle: recv ts=16350906us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17116) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17116) angle: recv ts=16395852us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17156) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17156) angle: recv ts=16440797us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17206) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17206) angle: recv ts=16485742us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17246) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17246) angle: recv ts=16530687us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17296) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17296) angle: recv ts=16575633us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17336) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17336) angle: recv ts=16620578us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17386) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (17386) angle: recv ts=16665523us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (17426) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17426) angle: recv ts=16710468us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17476) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17476) angle: recv ts=16755414us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17516) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17516) angle: recv ts=16800359us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17566) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17566) angle: recv ts=16845304us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17606) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17606) angle: recv ts=16890250us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17656) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (17656) angle: recv ts=16935195us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (17696) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (17696) angle: recv ts=16980140us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (17746) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (17746) angle: recv ts=17025085us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (17786) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17786) angle: recv ts=17070031us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17836) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (17836) angle: recv ts=17114976us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (17876) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17876) cam: FPS=23[0m
+[0;32mI (17876) angle: recv ts=17159921us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17926) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17926) angle: recv ts=17204867us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (17966) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (17966) angle: recv ts=17249812us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18016) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18016) angle: recv ts=17294757us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18056) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18056) angle: recv ts=17339702us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18106) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (18106) angle: recv ts=17384648us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (18146) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (18146) angle: recv ts=17429593us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (18196) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18196) angle: recv ts=17474538us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18236) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18236) angle: recv ts=17519484us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18286) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18286) angle: recv ts=17564429us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18326) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (18326) angle: recv ts=17609374us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (18376) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18376) angle: recv ts=17654319us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18416) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18416) angle: recv ts=17699265us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18466) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18466) angle: recv ts=17744210us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18506) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (18506) angle: recv ts=17789155us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (18556) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (18556) angle: recv ts=17834101us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (18596) cam: TH=119, TOP:(99,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (18596) angle: recv ts=17879043us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (18646) cam: TH=118, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18646) angle: recv ts=17923991us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18686) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18686) angle: recv ts=17968933us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18736) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (18736) angle: recv ts=18013882us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (18776) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18776) angle: recv ts=18058827us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18826) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18826) angle: recv ts=18103772us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18866) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (18866) angle: recv ts=18148715us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (18916) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (18916) cam: FPS=23[0m
+[0;32mI (18916) angle: recv ts=18193662us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (18956) cam: TH=118, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (18956) angle: recv ts=18238615us th=118 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (19006) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19006) angle: recv ts=18283554us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19046) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19046) angle: recv ts=18328505us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19096) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19096) angle: recv ts=18373442us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19136) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19136) angle: recv ts=18418396us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19186) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19186) angle: recv ts=18463335us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19226) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19226) angle: recv ts=18508283us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19276) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19276) angle: recv ts=18553226us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19316) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19316) angle: recv ts=18598177us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19366) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19366) angle: recv ts=18643116us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19406) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19406) angle: recv ts=18688067us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19456) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19456) angle: recv ts=18733007us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19496) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19496) angle: recv ts=18777958us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19546) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19546) angle: recv ts=18822897us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19586) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (19586) angle: recv ts=18867849us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (19636) cam: TH=119, TOP:(99,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19636) angle: recv ts=18912785us th=119 sz=160x120 | TOP(OK):(99,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19676) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19676) angle: recv ts=18957739us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19726) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19726) angle: recv ts=19002678us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19766) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19766) angle: recv ts=19047630us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19816) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19816) angle: recv ts=19092569us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19856) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (19856) angle: recv ts=19137520us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (19906) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19906) angle: recv ts=19182460us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19946) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (19946) cam: FPS=23[0m
+[0;32mI (19946) angle: recv ts=19227411us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (19996) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (19996) angle: recv ts=19272350us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (20036) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (20036) angle: recv ts=19317301us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (20086) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (20086) angle: recv ts=19362240us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (20126) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (20126) angle: recv ts=19407192us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (20176) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (20176) angle: recv ts=19452131us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (20216) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (20216) angle: recv ts=19497083us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (20266) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (20266) angle: recv ts=19542022us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (20306) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (20306) angle: recv ts=19586973us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (20356) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (20356) angle: recv ts=19631912us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (20396) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (20396) angle: recv ts=19676864us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (20446) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (20446) angle: recv ts=19721803us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (20486) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (20486) angle: recv ts=19766754us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (20536) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (20536) angle: recv ts=19811694us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (20576) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (20576) angle: recv ts=19856645us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (20626) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (20626) angle: recv ts=19901584us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (20666) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (20666) angle: recv ts=19946535us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (20716) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (20716) angle: recv ts=19991474us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (20756) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (20756) angle: recv ts=20036426us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (20806) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (20806) angle: recv ts=20081365us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (20846) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (20846) angle: recv ts=20126316us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (20886) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (20896) angle: recv ts=20171256us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (20936) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (20936) angle: recv ts=20216208us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (20976) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (20986) cam: FPS=23[0m
+[0;32mI (20986) angle: recv ts=20261146us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (21026) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21026) angle: recv ts=20306098us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21066) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (21066) angle: recv ts=20351036us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (21116) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21116) angle: recv ts=20395981us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21156) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21156) angle: recv ts=20440927us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21206) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21206) angle: recv ts=20485872us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21246) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (21246) angle: recv ts=20530817us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (21296) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21296) angle: recv ts=20575763us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21336) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21336) angle: recv ts=20620708us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21386) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21386) angle: recv ts=20665653us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21426) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21426) angle: recv ts=20710598us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21476) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21476) angle: recv ts=20755544us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21516) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21516) angle: recv ts=20800489us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21566) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (21566) angle: recv ts=20845434us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (21606) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21606) angle: recv ts=20890380us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21656) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21656) angle: recv ts=20935325us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21696) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21696) angle: recv ts=20980270us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21746) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21746) angle: recv ts=21025215us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21786) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21786) angle: recv ts=21070161us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21836) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21836) angle: recv ts=21115106us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21876) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21876) angle: recv ts=21160051us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21926) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21926) angle: recv ts=21204996us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (21966) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (21966) angle: recv ts=21249942us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22016) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22016) cam: FPS=23[0m
+[0;32mI (22016) angle: recv ts=21294887us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22056) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22056) angle: recv ts=21339832us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22106) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (22106) angle: recv ts=21384778us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (22146) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (22146) angle: recv ts=21429723us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (22196) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (22196) angle: recv ts=21474668us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (22236) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22236) angle: recv ts=21519613us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22286) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (22286) angle: recv ts=21564559us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (22326) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22326) angle: recv ts=21609504us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22376) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22376) angle: recv ts=21654449us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22416) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22416) angle: recv ts=21699395us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22466) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22466) angle: recv ts=21744340us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22506) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22506) angle: recv ts=21789285us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22556) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22556) angle: recv ts=21834230us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22596) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22596) angle: recv ts=21879176us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22646) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22646) angle: recv ts=21924121us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22686) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22686) angle: recv ts=21969066us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22736) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (22736) angle: recv ts=22014012us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (22776) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22776) angle: recv ts=22058957us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22826) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22826) angle: recv ts=22103902us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22866) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22866) angle: recv ts=22148847us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22916) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22916) angle: recv ts=22193793us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (22956) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (22956) angle: recv ts=22238738us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23006) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23006) angle: recv ts=22283688us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23046) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23046) cam: FPS=23[0m
+[0;32mI (23046) angle: recv ts=22328635us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23096) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23096) angle: recv ts=22373574us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23136) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23136) angle: recv ts=22418526us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23186) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23186) angle: recv ts=22463465us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23226) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23226) angle: recv ts=22508416us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23276) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23276) angle: recv ts=22553355us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23316) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (23316) angle: recv ts=22598307us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (23366) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (23366) angle: recv ts=22643246us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (23406) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23406) angle: recv ts=22688197us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23456) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (23456) angle: recv ts=22733137us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (23496) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23496) angle: recv ts=22778088us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23546) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23546) angle: recv ts=22823027us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23586) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23586) angle: recv ts=22867978us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23636) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (23636) angle: recv ts=22912918us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (23676) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23676) angle: recv ts=22957869us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23726) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23726) angle: recv ts=23002808us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23766) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23766) angle: recv ts=23047759us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23816) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (23816) angle: recv ts=23092699us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (23856) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23856) angle: recv ts=23137650us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23906) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23906) angle: recv ts=23182589us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23946) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23946) angle: recv ts=23227541us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (23996) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (23996) angle: recv ts=23272480us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24036) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24036) angle: recv ts=23317431us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24086) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24086) cam: FPS=23[0m
+[0;32mI (24086) angle: recv ts=23362370us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24126) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24126) angle: recv ts=23407322us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24176) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24176) angle: recv ts=23452261us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24216) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24216) angle: recv ts=23497212us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24266) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24266) angle: recv ts=23542152us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24306) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24306) angle: recv ts=23587103us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24356) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24356) angle: recv ts=23632042us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24396) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24396) angle: recv ts=23676993us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24446) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24446) angle: recv ts=23721933us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24486) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24486) angle: recv ts=23766884us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24536) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24536) angle: recv ts=23811823us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24576) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24576) angle: recv ts=23856775us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24626) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24626) angle: recv ts=23901714us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24666) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24666) angle: recv ts=23946665us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24716) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24716) angle: recv ts=23991604us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24756) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24756) angle: recv ts=24036556us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24806) cam: TH=119, TOP:(100,17)  MID:(63,59)  BOT:(47,99)[0m
+[0;32mI (24806) angle: recv ts=24081495us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(63,59)  BOT(OK):(47,99)[0m
+[0;32mI (24846) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24846) angle: recv ts=24126446us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24896) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24896) angle: recv ts=24171385us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24936) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24936) angle: recv ts=24216337us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (24976) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (24986) angle: recv ts=24261276us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25026) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25026) angle: recv ts=24306227us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25066) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25076) angle: recv ts=24351167us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25116) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25116) cam: FPS=23[0m
+[0;32mI (25116) angle: recv ts=24396118us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25156) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25166) angle: recv ts=24441057us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25206) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25206) angle: recv ts=24486002us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25246) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25246) angle: recv ts=24530947us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25296) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25296) angle: recv ts=24575892us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25336) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25336) angle: recv ts=24620838us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25386) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25386) angle: recv ts=24665783us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25426) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25426) angle: recv ts=24710728us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25476) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25476) angle: recv ts=24755674us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25516) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25516) angle: recv ts=24800619us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25566) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25566) angle: recv ts=24845564us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25606) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25606) angle: recv ts=24890509us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25656) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25656) angle: recv ts=24935455us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25696) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25696) angle: recv ts=24980400us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25746) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25746) angle: recv ts=25025345us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25786) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25786) angle: recv ts=25070290us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25836) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25836) angle: recv ts=25115236us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25876) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25876) angle: recv ts=25160181us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25926) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25926) angle: recv ts=25205126us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (25966) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (25966) angle: recv ts=25250072us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26016) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26016) angle: recv ts=25295017us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26056) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26056) angle: recv ts=25339962us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26106) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26106) angle: recv ts=25384907us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26146) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26146) cam: FPS=23[0m
+[0;32mI (26146) angle: recv ts=25429853us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26196) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26196) angle: recv ts=25474798us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26236) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26236) angle: recv ts=25519743us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26286) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26286) angle: recv ts=25564689us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26326) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26326) angle: recv ts=25609634us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26376) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26376) angle: recv ts=25654579us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26416) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26416) angle: recv ts=25699524us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26466) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26466) angle: recv ts=25744469us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26506) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26506) angle: recv ts=25789415us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26556) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26556) angle: recv ts=25834360us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26596) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26596) angle: recv ts=25879306us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26646) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26646) angle: recv ts=25924251us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26686) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26686) angle: recv ts=25969196us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26736) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26736) angle: recv ts=26014141us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26776) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26776) angle: recv ts=26059087us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26826) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26826) angle: recv ts=26104032us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26866) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26866) angle: recv ts=26148977us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26916) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26916) angle: recv ts=26193922us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (26956) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (26956) angle: recv ts=26238868us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27006) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27006) angle: recv ts=26283813us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27046) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27046) angle: recv ts=26328758us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27096) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27096) angle: recv ts=26373703us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27136) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27136) angle: recv ts=26418656us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27186) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27186) cam: FPS=23[0m
+[0;32mI (27186) angle: recv ts=26463595us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27226) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27226) angle: recv ts=26508546us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27276) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27276) angle: recv ts=26553485us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27316) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27316) angle: recv ts=26598437us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27366) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27366) angle: recv ts=26643376us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27406) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27406) angle: recv ts=26688327us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27456) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27456) angle: recv ts=26733266us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27496) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27496) angle: recv ts=26778218us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27546) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27546) angle: recv ts=26823157us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27586) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27586) angle: recv ts=26868108us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27636) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27636) angle: recv ts=26913048us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27676) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27676) angle: recv ts=26957999us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27726) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27726) angle: recv ts=27002938us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27766) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27766) angle: recv ts=27047889us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27816) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27816) angle: recv ts=27092829us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27856) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27856) angle: recv ts=27137780us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27906) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27906) angle: recv ts=27182719us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27946) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27946) angle: recv ts=27227670us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (27996) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (27996) angle: recv ts=27272609us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28036) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28036) angle: recv ts=27317561us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28086) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28086) angle: recv ts=27362500us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28126) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28126) angle: recv ts=27407452us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28176) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28176) angle: recv ts=27452391us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28216) cam: TH=119, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28216) cam: FPS=23[0m
+[0;32mI (28216) angle: recv ts=27497342us th=119 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28266) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28266) angle: recv ts=27542282us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28306) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28306) angle: recv ts=27587233us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28356) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28356) angle: recv ts=27632172us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28396) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28396) angle: recv ts=27677123us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28446) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28446) angle: recv ts=27722063us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28486) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28486) angle: recv ts=27767014us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28536) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28536) angle: recv ts=27811953us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28576) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28576) angle: recv ts=27856904us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28626) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28626) angle: recv ts=27901844us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28666) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28666) angle: recv ts=27946795us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28716) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28716) angle: recv ts=27991734us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28756) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28756) angle: recv ts=28036685us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28806) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28806) angle: recv ts=28081625us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28846) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28846) angle: recv ts=28126576us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28896) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28896) angle: recv ts=28171515us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28936) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28936) angle: recv ts=28216467us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (28986) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (28986) angle: recv ts=28261406us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29026) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29026) angle: recv ts=28306357us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29066) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29076) angle: recv ts=28351299us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29116) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29116) angle: recv ts=28396247us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29156) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29166) angle: recv ts=28441187us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29206) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29206) angle: recv ts=28486138us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29246) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29256) cam: FPS=23[0m
+[0;32mI (29256) angle: recv ts=28531081us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29296) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29296) angle: recv ts=28576022us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29336) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29336) angle: recv ts=28620967us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29386) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29386) angle: recv ts=28665913us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29426) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29426) angle: recv ts=28710858us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29476) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29476) angle: recv ts=28755803us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29516) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29516) angle: recv ts=28800749us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29566) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29566) angle: recv ts=28845694us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29606) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29606) angle: recv ts=28890639us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29656) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29656) angle: recv ts=28935584us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29696) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29696) angle: recv ts=28980530us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29746) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29746) angle: recv ts=29025475us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29786) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29786) angle: recv ts=29070420us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29836) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29836) angle: recv ts=29115365us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29876) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29876) angle: recv ts=29160311us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29926) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29926) angle: recv ts=29205256us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (29966) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (29966) angle: recv ts=29250201us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30016) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30016) angle: recv ts=29295147us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30056) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30056) angle: recv ts=29340092us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30106) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30106) angle: recv ts=29385037us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30146) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30146) angle: recv ts=29429982us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30196) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30196) angle: recv ts=29474928us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30236) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30236) angle: recv ts=29519873us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30286) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30286) cam: FPS=23[0m
+[0;32mI (30286) angle: recv ts=29564818us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30326) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30326) angle: recv ts=29609764us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30376) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30376) angle: recv ts=29654709us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30416) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (30416) angle: recv ts=29699654us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (30466) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30466) angle: recv ts=29744599us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30506) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30506) angle: recv ts=29789545us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30556) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30556) angle: recv ts=29834490us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30596) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30596) angle: recv ts=29879435us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30646) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (30646) angle: recv ts=29924380us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (30686) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30686) angle: recv ts=29969326us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30736) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (30736) angle: recv ts=30014271us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (30776) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30776) angle: recv ts=30059216us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30826) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30826) angle: recv ts=30104162us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30866) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30866) angle: recv ts=30149107us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30916) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30916) angle: recv ts=30194052us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (30956) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (30956) angle: recv ts=30238997us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31006) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (31006) angle: recv ts=30283943us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (31046) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (31046) angle: recv ts=30328888us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (31096) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31096) angle: recv ts=30373833us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31136) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (31136) angle: recv ts=30418779us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (31186) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31186) angle: recv ts=30463724us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31226) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31226) angle: recv ts=30508675us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31276) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (31276) angle: recv ts=30553615us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (31316) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31316) cam: FPS=23[0m
+[0;32mI (31316) angle: recv ts=30598566us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31366) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31366) angle: recv ts=30643506us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31406) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31406) angle: recv ts=30688457us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31456) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31456) angle: recv ts=30733396us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31496) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31496) angle: recv ts=30778347us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31546) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31546) angle: recv ts=30823287us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31586) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31586) angle: recv ts=30868238us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31636) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31636) angle: recv ts=30913177us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31676) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31676) angle: recv ts=30958129us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31726) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (31726) angle: recv ts=31003068us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (31766) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (31766) angle: recv ts=31048019us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (31816) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31816) angle: recv ts=31092959us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31856) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31856) angle: recv ts=31137910us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31906) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31906) angle: recv ts=31182849us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31946) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31946) angle: recv ts=31227800us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (31996) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (31996) angle: recv ts=31272740us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (32036) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (32036) angle: recv ts=31317691us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (32086) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (32086) angle: recv ts=31362630us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (32126) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (32126) angle: recv ts=31407581us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (32176) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (32176) angle: recv ts=31452521us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (32216) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (32216) angle: recv ts=31497472us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (32266) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (32266) angle: recv ts=31542411us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (32306) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (32306) angle: recv ts=31587362us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(61,59)  BOT(OK):(47,99)[0m
+[0;32mI (32356) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (32356) cam: FPS=23[0m
+[0;32mI (32356) angle: recv ts=31632302us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (32396) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (32396) angle: recv ts=31677253us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (32446) cam: TH=120, TOP:(100,17)  MID:(62,59)  BOT:(47,99)[0m
+[0;32mI (32446) angle: recv ts=31722192us th=120 sz=160x120 | TOP(OK):(100,17)  MID(OK):(62,59)  BOT(OK):(47,99)[0m
+[0;32mI (32486) cam: TH=120, TOP:(100,17)  MID:(61,59)  BOT:(47,99)[0m
+[0;32mI (32486) angle: recv ts=
