@@ -1,0 +1,5 @@
+west:
+  command: /home/rosy-jwang/.local/bin/west build -b nrf52840dk/nrf52840 -d build
+    --pristine always
+  topdir: /home/rosy-jwang/zephyrproject
+  version: 1.4.0

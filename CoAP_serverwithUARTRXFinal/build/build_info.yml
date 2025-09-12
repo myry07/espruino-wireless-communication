@@ -1,0 +1,61 @@
+cmake:
+  application:
+    configuration-dir: '/home/rosy-jwang/zephyrproject/CoAP_serverwithUARTRXFinal'
+    source-dir: '/home/rosy-jwang/zephyrproject/CoAP_serverwithUARTRXFinal'
+  board:
+    name: 'nrf52840dk'
+    path:
+     - '/home/rosy-jwang/zephyrproject/zephyr/boards/nordic/nrf52840dk'
+    qualifiers: 'nrf52840'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/rosy-jwang/zephyrproject/zephyr/boards/nordic/nrf52840dk/nrf52840dk_nrf52840.dts'
+    include-dirs:
+     - '/home/rosy-jwang/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/rosy-jwang/zephyrproject/modules/hal/atmel/include'
+     - '/home/rosy-jwang/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/rosy-jwang/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/rosy-jwang/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/rosy-jwang/zephyrproject/modules/hal/microchip/include'
+     - '/home/rosy-jwang/zephyrproject/modules/hal/microchip/dts'
+     - '/home/rosy-jwang/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/rosy-jwang/zephyrproject/modules/hal/nxp/dts'
+     - '/home/rosy-jwang/zephyrproject/modules/hal/stm32/dts'
+     - '/home/rosy-jwang/zephyrproject/modules/hal/ti/dts'
+     - '/home/rosy-jwang/zephyrproject/zephyr/include'
+     - '/home/rosy-jwang/zephyrproject/zephyr/include/zephyr'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/common'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/vendor'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/rx'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/x86'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/xtensa'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/sparc'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/riscv'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/posix'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/arm64'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/arm'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts/arc'
+     - '/home/rosy-jwang/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - '/home/rosy-jwang/zephyrproject/zephyr/boards/nordic/nrf52840dk/nrf52840dk_nrf52840_defconfig'
+     - '/home/rosy-jwang/zephyrproject/CoAP_serverwithUARTRXFinal/prj.conf'
+    user-files:
+     - '/home/rosy-jwang/zephyrproject/CoAP_serverwithUARTRXFinal/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/rosy-jwang/zephyr-sdk-0.16.4'
+  vendor-specific:
+    nordic:
+      svdfile: '/home/rosy-jwang/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52840.svd'
+  zephyr:
+    version: '4.2.99'
+    zephyr-base: '/home/rosy-jwang/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/rosy-jwang/.local/bin/west build -b nrf52840dk/nrf52840 -d build --pristine always'
+  topdir: '/home/rosy-jwang/zephyrproject'
+  version: '1.4.0'

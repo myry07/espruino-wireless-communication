@@ -1,0 +1,3 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/rosy-jwang/.espressif/python_env/idf5.5_py3.10_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=0 /home/rosy-jwang/Documents/myrepo/espruino-wireless-communication/line_detection
+warning: the value 'y' is invalid for SOC_SDM_GROUPS (defined at /home/rosy-jwang/esp/esp-idf/./components/soc/esp32s3/include/soc/Kconfig.soc_caps.in:862), which has type int -- assignment ignored
+warning: user value 68 on the int symbol LWIP_DHCP_OPTIONS_LEN (defined at /home/rosy-jwang/esp/esp-idf/components/lwip/Kconfig:364) ignored due to being outside the active range ([69, 255]) -- falling back on defaults
